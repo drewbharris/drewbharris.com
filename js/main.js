@@ -19,7 +19,7 @@ App.setActive = function(section){
 			this.activeSection = section;
 			return;
 		}.bind(this));
-		
+
 	}
 };
 
@@ -30,9 +30,6 @@ App.menuInit = function(){
 		}.bind(this));
 	}.bind(this));
 };
-
-
-
 
 $(document).ready(function(){
 	App.menuInit();

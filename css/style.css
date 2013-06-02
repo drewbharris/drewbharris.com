@@ -1,3 +1,9 @@
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+}
+
 .clearfix:after {
    content: " ";
    visibility: hidden;
@@ -7,25 +13,25 @@
 }
 
 .wrapper {
-	width: 60%;
+	width: 65%;
 	margin: 0 auto;
 }
 
 .header {
 	/*letter-spacing: -10px;*/
-	font-size: 98px;
-	line-height: 90px;
+	font-size: 5em;
+	line-height: 1em;
 	margin: 0 0 35px 0;
 	text-align: center;
 }
 
-body {
-	font-family: 'Lato', sans-serif;
-	font-weight: 300;
-}
-
 li {
 	list-style-type: none;
+}
+
+.menu {
+	width: 80%;
+	margin: 0 auto;
 }
 
 .menu-item {
@@ -68,4 +74,58 @@ li {
 
 .section-content {
 	display: none;
+	width: 76%;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 960px) {
+	.wrapper {
+		width: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+	.section-content {
+		width: 80%;
+	}
+}
+
+@media (max-width: 490px) {
+	.header {
+		font-size: 76px;
+	}
+}
+
+@media (max-width: 400px) {
+	.header {
+		font-size: 70px;
+	}
+}
+
+@media (max-device-width: 1024px) {
+	.header {
+		font-size: 9em;
+	}
+	.wrapper {
+		width: 100%;
+	}
+	.menu-item img {
+		width: 40%;
+	}
+	.menu-item {
+		font-size: 2.5em;
+	}
+	.section-content {
+		width: 86%;
+		margin: 0 auto;
+	}
+}
+@media (max-device-width: 640px) {
+
+}
+@media (max-device-width: 540px) {
+
+}
+@media (max-device-width: 320px) {
+
 }
