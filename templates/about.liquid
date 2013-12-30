@@ -1,0 +1,101 @@
+<html>
+    <head>
+    	<title>about | drew b harris</title>
+        <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style type="text/css">
+            a, a:visited, a:active {
+                text-decoration: none;
+                color:red;
+            }
+            
+            a:hover {
+            	color:red;
+                text-decoration: none;
+            }
+
+            .text-link {
+                color:black;
+                text-decoration: none;
+            }
+            .text-link:hover {
+                color:red;
+                text-decoration:none;
+            }
+            
+            body {
+                font-family: 'Cutive Mono', serif;
+                
+            }
+
+			.wrapper {
+				width: 700px;
+				margin: 0 auto;
+			}
+			
+            .title {
+                font-size: 5em;
+                letter-spacing: -5px;
+                text-align:center;
+            }
+            
+            .description {
+				margin: -10px 0 0 0;
+				text-align: center;
+            	padding: 0 0 0 0;
+            	font-size: 1em;
+            	letter-spacing: -2px;
+            }
+            
+            .links {
+                font-size: 2.5em;
+                padding: 0 0 0 0;
+                letter-spacing: -5px;
+            }
+            
+            #content {
+            	width: 600px;
+            	margin: -10px auto;
+            	letter-spacing: -1px;
+            }
+
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function(){
+            	
+				$(".link").hover(
+					function () {
+						$(this).prepend($("<span id='back-dot'>.</span>"));
+						$(this).css('margin-left', '-19px'); 
+					}, 
+					function () {
+						$("#back-dot").remove();
+						$(this).css('margin-left', '0px');
+					}
+				);
+            });
+            
+            
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="title">
+                drew b harris
+            </div>
+            <div class="description">
+				musician / software developer / electrical engineer          
+            </div>
+            <div class="links">
+            	<span class="link"><a href="/"><span class="text-link">back</span></a></span><br/>
+            </div>
+            <div id="content">
+            	<p>My name is Drew Harris.  I'm a musician and music producer, software engineer and hobbyist hardware creator.  I currently work at <a href="http://bandcamp.com">Bandcamp</a>.  I graduated in 2013 from University of Victoria in Canada with a Bachelor in Electrical Engineering.  I completed several internships as a software developer during my degree: as a node.js developer at exfm in New York City, as a Java developer at Alcatel-Lucent in Ottawa, and two internships at University of Victoria as a Python developer in the high energy physics lab and at the Computer Help Desk.
+                <p> Through employment experience, class work and my own <a href="/projects">projects</a>, I've learned to write Ruby, node.js/JavaScript, C++, Python and Java code to perform wide-ranging tasks, from large web applications to <a href="/projects/ViLA">iOS applications that provide visual accompaniment to a live musical performance</a>.</p>
+                <p>Along with software and hardware development, I compose and produce electronic music under several monikers, including <a href="http://grmnygrmny.bandcamp.com">Germany Germany</a>, <a href="http://radioseven.bandcamp.com">radioseven</a> and <a href="http://toycamera.bandcamp.com">Toy Camera</a>.  I've performed in Vancouver, New York City, Paris, and Berlin, among other locations, and I've released a total of 8 albums independently.</p>
+                <p>Please contact me at <a href="mailto:drewbharris@gmail.com">drewbharris@gmail.com</a> for any inquiries. </p> 
+                <p>My current resume/CV can be viewed <a href="/static/employment/Resume_2013.pdf">here</a>.</p>
+            </div>
+        </div>
+    </body>
+</html>

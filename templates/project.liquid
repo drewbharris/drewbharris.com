@@ -1,0 +1,101 @@
+<html>
+    <head>
+    	<title>{{project}} | drew b harris</title>
+        <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style type="text/css">
+            a, a:visited, a:active {
+                text-decoration: none;
+                color:black;
+            }
+            
+            a:hover {
+            	color:red;
+            }
+            
+            body {
+                font-family: 'Cutive Mono', serif;
+                
+            }
+
+			.wrapper {
+				width: 700px;
+				margin: 0 auto;
+			}
+			
+            .title {
+                font-size: 5em;
+                letter-spacing: -5px;
+                text-align:center;
+            }
+            
+            .description {
+				margin: -10px 0 0 0;
+				text-align: center;
+            	padding: 0 0 0 0;
+            	font-size: 1em;
+            	letter-spacing: -2px;
+            }
+            
+            .links {
+                font-size: 2.5em;
+                padding: 0 0 0 0;
+                letter-spacing: -5px;
+            }
+            
+            .project_name {
+            	font-size: 3em;
+                padding: 0 0 10px 0;
+                letter-spacing: -5px;
+            }
+            
+            .project_content {
+            	width: 600px;
+            	margin: -10px auto;
+            	letter-spacing: -1px;
+            }
+			
+			.link {
+				font-size: 1.5em;
+				letter-spacing: -3px;
+			}
+			
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function(){
+            
+				$(".backlink").hover(
+					function () {
+						$(this).prepend($("<span>.</span>"));
+						$(this).css('margin-left', '-19px'); 
+					}, 
+					function () {
+						$(this).find("span:last").remove();
+						$(this).css('margin-left', '0px');
+					}
+				);
+				
+            });
+            
+            
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="title">
+                drew b harris
+            </div>
+            <div class="description">
+				musician / software developer / electrical engineer          
+            </div>
+            <div class="links">
+            	<span class="backlink"><a href="/projects">back</a></span>
+            	<a href="/">home</a>
+            </div>
+            <div id="content">
+				<div class="project_name">> {{project}}</div>
+				<div class="project_content">{{content}}</div>
+            </div>
+        </div>
+    </body>
+</html>

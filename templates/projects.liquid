@@ -1,0 +1,166 @@
+<html>
+    <head>
+    	<title>projects | drew b harris</title>
+        <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style type="text/css">
+            a, a:visited, a:active {
+                text-decoration: none;
+                color:black;
+            }
+            
+            a:hover {
+            	color:red;
+            }
+            
+            body {
+                font-family: 'Cutive Mono', serif;
+                
+            }
+
+			.wrapper {
+				width: 700px;
+				margin: 0 auto;
+			}
+			
+            .title {
+                font-size: 5em;
+                letter-spacing: -5px;
+                text-align:center;
+            }
+            
+            .description {
+				margin: -10px 0 0 0;
+				text-align: center;
+            	padding: 0 0 0 0;
+            	font-size: 1em;
+            	letter-spacing: -2px;
+            }
+            
+            .links {
+                font-size: 2.5em;
+                padding: 0 0 0 0;
+                letter-spacing: -5px;
+            }
+            
+            .projects_list {
+            	padding: 0 0 0 30px;
+            	font-size: 2em;
+            	letter-spacing: -3px;
+            }
+
+			.project_description {
+				font-size: 0.5em;
+				letter-spacing: -2px;
+			}
+			
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function(){
+            
+				$(".link").hover(
+					function () {
+						$(this).prepend($("<span>.</span>"));
+						$(this).css('margin-left', '-19px'); 
+					}, 
+					function () {
+						$(this).find("span:last").remove();
+						$(this).css('margin-left', '0px');
+					}
+				);
+				
+				$("#sharedtapes").hover(
+                                        function () {
+                                                $(this).append($("<span class='project_description'> {{sharedtapes_description}}</span>"));
+                                        }, 
+                                        function () {
+                                                $(this).find("span:last").remove();
+                                        }
+                                );
+					
+				$("#multi").hover(
+					function () {
+						$(this).append($("<span class='project_description'> {{multi_description}}</span>"));
+					}, 
+					function () {
+						$(this).find("span:last").remove();
+					}
+				);
+				
+				$("#livectl").hover(
+					function () {
+						$(this).append($("<span class='project_description'> {{livectl_description}}</span>"));
+					}, 
+					function () {
+						$(this).find("span:last").remove();
+					}
+				);
+				
+				$("#lightarray").hover(
+					function () {
+						$(this).append($("<span class='project_description'> {{lightarray_description}}</span>"));
+					}, 
+					function () {
+						$(this).find("span:last").remove();
+					}
+				);
+				
+				$("#vila").hover(
+					function () {
+						$(this).append($("<span class='project_description'> {{vila_description}}</span>"));
+					}, 
+					function () {
+						$(this).find("span:last").remove();
+					}
+				);
+				
+				$("#photogallery").hover(
+					function () {
+						$(this).append($("<span class='project_description'> {{photogallery_description}}</span>"));
+					}, 
+					function () {
+						$(this).find("span:last").remove();
+					}
+				);
+				
+				$("#journal").hover(
+					function () {
+						$(this).append($("<span class='project_description'> {{journal_description}}</span>"));
+					}, 
+					function () {
+						$(this).find("span:last").remove();
+					}
+				);
+				
+				
+            });
+            
+            
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="title">
+                drew b harris
+            </div>
+            <div class="description">
+				musician / software developer / electrical engineer          
+            </div>
+            <div class="links">
+            	<span class="link"><a href="/">back</a></span><br/>
+            </div>
+            <div id="content">
+            	<div class="projects_list">
+			<span id="sharedtapes"><a href="/projects/sharedtapes">sharedtapes</a></span><br/>
+            		<span id="multi"><a href="/projects/multi">multi</a></span><br/>
+            		<span id="livectl"><a href="/projects/livectl">livectl</a></span><br/>
+            		<span id="lightarray"><a href="/projects/lightarray">lightarray</a></span><br/>
+            		<span id="vila"><a href="/projects/ViLA">ViLA</a></span><br/>
+            		<span id="photogallery"><a href="/projects/photogallery">photogallery</a></span><br/>
+            		<span id="journal"><a href="/projects/journal">journal</a></span><br/>
+
+            	</div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>drew b harris</title>
+        <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style type="text/css">
+            a, a:visited, a:active {
+                text-decoration: none;
+                color:black;
+            }
+            
+            a:hover {
+                color:red;
+            }
+            
+            body {
+                font-family: 'Cutive Mono', serif;
+                
+            }
+
+            .wrapper {
+                width: 700px;
+                margin: 0 auto;
+            }
+            
+            .title {
+                font-size: 5em;
+                letter-spacing: -5px;
+                text-align:center;
+            }
+            
+            .description {
+                margin: -10px 0 0 0;
+                text-align: center;
+                padding: 0 0 0 0;
+                font-size: 1em;
+                letter-spacing: -2px;
+            }
+            
+            .content {
+                padding: 30px 0 0 0;
+            }
+            
+            .links {
+                font-size: 2.5em;
+                padding: 0 0 0 0;
+                letter-spacing: -5px;
+                text-align:center;
+            }
+            
+            .left {
+                width: 175px;
+                float: left;
+                padding: 0 0 0 175px;
+            }
+            
+            .right {
+                width: 175px;
+                float: left;
+                padding: 0 175px 0 0;
+            }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".link").hover(
+                    function () {
+                        $(this).prepend($("<span>.</span>"));
+                        $(this).css('margin-left', '-19px'); 
+                    }, 
+                    function () {
+                        $(this).find("span:last").remove();
+                        $(this).css('margin-left', '0px');
+                    }
+                );
+            });
+            
+            
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="title">
+                drew b harris
+            </div>
+            <div class="description">
+                musician / software developer / electrical engineer          
+            </div>
+            <div class="content">
+                <div class="links left">
+                    <span class="link"><a href="/about">about</a></span><br/>
+                    <span class="link"><a href="http://grmnygrmny.bandcamp.com">music</a></span><br/>
+                    <span class="link"><a href="mailto:drewbharris@gmail.com">contact</a></span><br/>
+                </div>
+                <div class="links right">
+                    <span class="link"><a href="/projects">projects</a></span><br/>
+                    <span class="link"><a href="http://photos.drewbharris.com">photos</a></span><br/>
+                    <span class="link"><a href="http://github.com/drewbharris">github</a></span><br/>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

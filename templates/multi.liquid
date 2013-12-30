@@ -1,0 +1,7 @@
+<p>Written for the New York City Music Hackathon in October, multi is a node.js application to create dynamic multi-user audio installations, making use of speakers in laptops, mobile devices and tablet computers.</p>
+<p>A multi server runs on one central computer connected to a local area network.  Multi-track compositions are split into seperate mp3 files and loaded into the multi server (up to 10 tracks were tested).  Client computers - devices running a browser implementing the HTML5 Web Audio API - then connect to a web server run by multi and are presented with a simple web interface.  Upon client connection, the multi server opens a WebSocket connection to the client, passes the URL of the assigned audio file as a WebSocket message and tells the client to buffer the and prepare for playback.  Once all clients are connected and buffered, the multi server is notified.  Upon triggering of playback, all clients will (theoretically) begin playback simultaneously, presenting a surround-sound effect using only pre-existing speakers.</p>
+<p>Unfortunately, due to network-related latency, delays of up to 300ms occurred after triggering playback, especially on mobile devices.  The Web Audio API is still very new and different browsers implement it differently.  This project is still a work in progress.</p>
+
+<div class="link">
+	<a href="http://github.com/grmnygrmny/node-multi">source</a>
+</div>
