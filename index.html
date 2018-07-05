@@ -1,0 +1,242 @@
+<html>
+    <head>
+        <title>drew b harris</title>
+        <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style type="text/css">
+            a, a:visited, a:active {
+                text-decoration: none;
+                color: #408ea3;
+            }
+            
+            a:hover {
+                text-decoration: underline;
+            }
+            
+            body {
+                font-family: 'Cutive Mono', serif;
+                font-size: 18px;
+            }
+
+            .wrapper {
+                width: 700px;
+                margin: 36px auto;
+            }
+            
+            .title {
+                font-size: 5em;
+                letter-spacing: -5px;
+                text-align:center;
+            }
+            
+            .description {
+                margin: -10px 0 0 0;
+                text-align: center;
+                padding: 0 0 0 0;
+                font-size: 1em;
+            }
+            
+            .content {
+                padding: 30px 0 0 0;
+            }
+
+            .content .links {
+                font-size: 36px;
+                padding: 0 0 0 0;
+            }
+
+            #root.content .links {
+                text-align:center;
+            }
+            
+            #root .left {
+                width: 175px;
+                float: left;
+                padding: 0 0 0 175px;
+            }
+            
+            #root .right {
+                width: 175px;
+                float: left;
+                padding: 0 175px 0 0;
+            }
+
+            #root {
+                display: block;
+            }
+
+            #about,
+            #projects {
+                display: none;
+            }
+
+            h3.outdated {
+                text-decoration: underline;
+                margin: 30px 0 40px 0;
+                display: block;
+            }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("a.switch-content").click(function () {
+                    var target = $(this).data("target");
+
+                    $(".content").hide();
+                    $(target).show();
+
+                    return false;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="title">
+                drew b harris
+            </div>
+            <div class="description">
+                electronic artist / software developer / DIY enthusiast          
+            </div>
+
+            <div class="content" id="root">
+                <div class="links left">
+                    <span class="link"><a href="#" class="switch-content" data-target="#about">about</a></span><br/>
+                    <span class="link"><a href="http://grmnygrmny.bandcamp.com">music</a></span><br/>
+                    <span class="link"><a href="mailto:drewbharris@gmail.com">contact</a></span><br/>
+                </div>
+                <div class="links right">
+                    <span class="link"><a href="#" class="switch-content" data-target="#projects">projects</a></span><br/>
+                    <span class="link"><a href="http://travel.drewbharris.com">travel</a></span><br/>
+                    <span class="link"><a href="http://github.com/drewbharris">github</a></span><br/>
+                </div>
+            </div>
+
+            <div class="content" id="about">
+                <div class="links">
+                    <span class="link"><a href="#" class="switch-content" data-target="#root"><span class="text-link">back</span></a></span><br/>
+                </div>
+
+                <p>My name is Drew Harris.  I'm a musician and music producer, software engineer and hobbyist hardware creator.  I currently work at <a href="http://bandcamp.com">Bandcamp</a>.  I graduated in 2013 from University of Victoria in Canada with a Bachelor in Electrical Engineering.  I completed several internships as a software developer during my degree: as a node.js developer at exfm in New York City, as a Java developer at Alcatel-Lucent in Ottawa, and two internships at University of Victoria as a Python developer in the high energy physics lab and at the Computer Help Desk.
+                <p> Through employment experience, class work and my own <a href="projects.html">projects</a>, I've learned to write Ruby, node.js/JavaScript, C++, Python and Java code to perform wide-ranging tasks, from large web applications to iOS applications that provide visual accompaniment to a live musical performance.</p>
+                <p>Along with software and hardware development, I compose and produce electronic music under several monikers, including <a href="http://grmnygrmny.bandcamp.com">Germany Germany</a>, <a href="http://radioseven.bandcamp.com">radioseven</a> and <a href="http://toycamera.bandcamp.com">Toy Camera</a>.  I've performed in Vancouver, New York City, Paris, and Berlin, among other locations, and I've released a total of 8 albums independently.</p>
+                <p>Please contact me at <a href="mailto:drewbharris@gmail.com">drewbharris@gmail.com</a> for any inquiries. </p> 
+            </div>
+
+            <div class="content" id="projects">
+                <div class="links">
+                    <span class="link"><a href="#" class="switch-content" data-target="#root"><span class="text-link">back</span></a></span><br/>
+                </div>
+
+                <div class="projects-list">
+                    <div class="project">
+                        <h3>lightarray</h3>
+                        <div class="project-description">
+                            <p>Visual music performance accompaniment with MIDI and an Arduino, built for Germany Germany live performances.</p>
+                            <p>4 strings of white LEDs are connected to the lightarray controller, a box containing an Arduino and switching transistors to amplify output signals.  MIDI control change messages (serial data) dictating a four-channel light pattern, defined by a set of envelope parameters, are passed from Ableton Live on a connected computer to the lightarray controller over USB. The lightarray controller draws each channel's pattern to each of the four LED strings using pulse width modulation (PWM) amplified by transistors. The controller also transmits the same information over radio frequency (RF) to remotely connected light strings. A newer iteration of this project, combining the lightarray controller with a hardware audio player, is in the works.</p>
+                            <p>The original version (v1) of the project was presented at different performances in New York City, including Glasslands Gallery in Brooklyn. Since then, it has gone through different iterations and is consistently part of the Germany Germany performances.</p>
+
+                            <div class="link">
+                                <a href="http://vimeo.com/35853929">video (v1)</a><br>
+                                <a href="http://www.youtube.com/watch?v=7cs68KK5B50">video (v1)</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <h3 class="outdated">please note that the following is outdated, but is still interesting for posterity</h3>
+
+                    <div class="project">
+                        <h3>flickr_gallery</h3>
+                        <div class="project-description">
+                            <p>A simple photo gallery, using Flickr as the photo storage backend.</p>
+
+                            <div class="link">
+                                <a href="https://github.com/drewbharris/flickr_gallery">public repository</a><br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <h3>sharedtapes</h3>
+                        <div class="project-description">
+                            <p>Real-time mixtape/playlist creation/collaboration/sharing tool, written in JavaScript with node.js on the back end and Backbone.js on the front end.  My first attempt at a full JavaScript application.</p>
+                            <p>The application relies on exfm's audio stream database and uses a WebSocket to maintain an open connection between client and server.  When a client makes a change to a playlist (add song, change order, change title), the changes to propagated through to all connected clients.  This project is a work in progress and is currently in the 'alpha' stage.</p>
+
+                            <div class="link">
+                                <a href="https://github.com/sharedtapes">public repository</a><br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <h3>multi</h3>
+                        <div class="project-description">
+                            <p>Written for the New York City Music Hackathon in October, multi is a node.js application to create dynamic multi-user audio installations, making use of speakers in laptops, mobile devices and tablet computers.</p>
+                            <p>A multi server runs on one central computer connected to a local area network.  Multi-track compositions are split into seperate mp3 files and loaded into the multi server (up to 10 tracks were tested).  Client computers - devices running a browser implementing the HTML5 Web Audio API - then connect to a web server run by multi and are presented with a simple web interface.  Upon client connection, the multi server opens a WebSocket connection to the client, passes the URL of the assigned audio file as a WebSocket message and tells the client to buffer the and prepare for playback.  Once all clients are connected and buffered, the multi server is notified.  Upon triggering of playback, all clients will (theoretically) begin playback simultaneously, presenting a surround-sound effect using only pre-existing speakers.</p>
+                            <p>Unfortunately, due to network-related latency, delays of up to 300ms occurred after triggering playback, especially on mobile devices.  The Web Audio API is still very new and different browsers implement it differently.  This project is still a work in progress.</p>
+
+                            <div class="link">
+                                <a href="http://github.com/grmnygrmny/node-multi">source</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <h3>livectl</h3>
+                        <div class="project-description">
+                            <p>A small project, intended as an experiment to determine feasiblity.  Livectl is a node.js application to link audio performance and processing software over networked computers using WebSockets.</p>
+                            <p>A server instance of livectl is run on a central server.  Client instances connect to the server and present their MIDI inputs and outputs.  Currently, all messages are broadcast to all clients, but a patchable web interface was planned.  Unforunately, the latency was found to be too unpredictable for live keyboard performance, though patching of audio applications such as Ableton Live worked well.  This may be useful in a multi-computer electronic performance.  This project is still a work in progress.</p>
+
+                            <div class="link">
+                                <a href="http://github.com/drewbharris/node-livectl">source</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <h3>ViLA</h3>
+                        <div class="project-description">
+                            <p>Visual music performance accompaniment with openFrameworks and iOS, built for the Germany Germany live performance.</p>
+                            <p>ViLA, Virtual Light Array, is the mobile companion to lightarray.  Written in C++ with the openFrameworks toolkit, ViLA is my first iOS application.  Similar to light array, ViLA receives a light pattern in real-time through UDP network broadcast packets.  The light patterns are created in Ableton Live in the same way as the patterns for the physical lightarray installation.</p>
+                            <p>The application works well with minimal latency on an adhoc network, but UDP packets are dropped frequently when on a public wireless router.</p>
+
+                            <div class="link">
+                                <a href="http://grmnygrmny.tumblr.com/post/31617653233">video</a><br>
+                                <a href="https://itunes.apple.com/tr/app/vila/id556134981?mt=8">app store link</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <h3>photogallery</h3>
+                        <div class="project-description">
+                            <p>A weekend project to learn the Flask Python web framework.</p>
+                            <p>Photos are batch uploaded in a zip file, which is extracted and parsed in the Python web application.  Information about each image is retrieved during view using an AJAX request.</p>
+
+                            <div class="link">
+                                <a href="https://github.com/drewbharris/flask_gallery">source</a><br>
+                                <!--<a href="http://photos.drewbharris.com">photos.drewbharris.com</a><br>-->
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <h3>journal</h3>
+                        <div class="project-description">
+                            <p>A social/collaborative/community blog network.</p>
+                            <p>Journal is a blog/community application built on the Django Python web framework.  It was an experiment to create a smaller network of people that would communicate using text, images, audio and video.  Further implementation would be to have different communities for different interest groups, each posting different specific material.  Journal allowed private posting with the intention of keeping a journal of activity that could be partially public and partially private.</p>
+                            <p>Journal is no longer maintained and was never implemented in a large scale.  It was an experiment, as are all of these projects.</p>
+
+                            <div class="link">
+                                <a href="https://github.com/drewbharris/journal">source</a><br>
+                                <!--<a href="http://weaimforauthentic.com/journal/">weaimforauthentic.com/journal</a><br>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
